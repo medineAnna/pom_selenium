@@ -7,16 +7,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Driver {
-    static WebDriver driver;
-    public static void getDriver(){
-
+    public static WebDriver  driver;
+    public static WebDriver getDriver(){
         WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        if(driver==null){   // bu if sayesinde kod calisirken bir kere new keyword ile driver olusturulaca
+            // diger kullanimlarda new devreye girmeyecek
+            driver=new ChromeDriver();
+        }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        return driver;
     }
-
     public static void closeDriver(){
-        driver.quit();
+        if (driver!=null){
+            driver.quit();
+            driver=null;
+        }
     }
 }
