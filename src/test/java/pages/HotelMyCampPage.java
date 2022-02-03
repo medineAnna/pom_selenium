@@ -21,4 +21,10 @@ public class HotelMyCampPage {
 
     @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement loginButtonu;
+
+    @FindBy(xpath = "//span[text()='Try again please']")
+    public WebElement girisYapilamadiYazisi;
+
+    @FindBy(xpath="//span[text()='ListOfUsers']")
+    public WebElement basariliGirisYaziElementi;
 }
