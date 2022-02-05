@@ -25,7 +25,7 @@ public class C02_WebTables {
         //            ○ Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
         //            ○ 4.satirdaki(row) elementleri konsolda yazdırın.
     }
-    @Test
+    @Test(dependsOnMethods = "loginT")
     public void table(){
         //● table( ) metodu oluşturun
         //            ○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
@@ -47,5 +47,15 @@ public class C02_WebTables {
         //locate edip, bir liste atabiliriz
         List<WebElement>bodyTumDataList=hmcWebTablePage.tumBodyDatalariList;
         System.out.println("Body'deki data sayisi: " + bodyTumDataList);
+    }
+    @Test(dependsOnMethods = "loginT")
+    public void printRows(){
+        hmcWebTablePage=new HMCWebTablePage();
+        System.out.println(hmcWebTablePage.satirlarListesi.size());
+        List<WebElement>satirlarWebelementListesi=hmcWebTablePage.satirlarListesi;
+        for (WebElement each:satirlarWebelementListesi) {
+            System.out.println(each.getText());
+        }
+        System.out.println("4.satir: " + satirlarWebelementListesi.get(3).getText());
     }
 }
