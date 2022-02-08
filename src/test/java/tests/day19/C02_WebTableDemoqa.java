@@ -8,7 +8,7 @@ import utilities.Driver;
 public class C02_WebTableDemoqa {
     //Bir Class olusturun D19_WebtablesHomework
 
-    @Test
+    @Test(groups = {"smoke","regression"})
     public void demoqaTest(){
         //  1. “https://demoqa.com/webtables” sayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("DemoqaUrl"));

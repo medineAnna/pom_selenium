@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
+import utilities.Driver;
 
 import java.util.List;
 
@@ -57,5 +58,6 @@ public class C02_WebTables {
             System.out.println(each.getText());
         }
         System.out.println("4.satir: " + satirlarWebelementListesi.get(3).getText());
+
     }
 }
