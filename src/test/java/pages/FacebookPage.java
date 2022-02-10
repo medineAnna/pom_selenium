@@ -7,6 +7,8 @@ import utilities.Driver;
 
 public class FacebookPage {
 
+    public WebElement girilemediYazisiElemnti;
+
     public FacebookPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }

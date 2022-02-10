@@ -12,7 +12,7 @@ public class C01_HotelMyCampNegativeLogin {
         //1 ) Bir Class olustur : NegativeTest
         //2) Bir test method olustur NegativeLoginTest()
         //         https://www.hotelmycamp.com/ adresine git
-        Driver.getDriver().get("https://www.hotelmycamp.com/ ");
+        Driver.getDriver().get("https://www.hotelmycamp.com/");
 
         //        login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
