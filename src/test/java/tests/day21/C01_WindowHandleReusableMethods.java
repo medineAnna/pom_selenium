@@ -38,17 +38,5 @@ public class C01_WindowHandleReusableMethods {
 
         Driver.closeDriver();
     }
-    @Test
-    public void windowHandleReusableTest() throws IOException {
-        Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
-        Driver.getDriver().findElement(By.linkText("Click Here")).click();
-        ReusableMethods.switchToWindow("New Window");
-
-        String expectedTitle="New Window";
-        String actualTitle=Driver.getDriver().getTitle();
-
-        Assert.assertEquals(actualTitle,expectedTitle);
-        ReusableMethods.getScreenshot("WindowSwitch");
-        Driver.closeDriver();
-    }
+   
 }
